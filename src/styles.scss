@@ -1,0 +1,46 @@
+.navigation{
+    display: flex;
+    background-color: blue;
+    width: 100%;
+    height: 30px;
+}
+
+.container-small{
+    display: inline-flex;
+    height: 100%;
+    width: 25%;
+    margin: 0%;
+    padding: 0%;
+    align-items: center;
+    .logo{
+        padding-left: 20px;
+        color: white;
+        cursor: pointer;
+        font-size: larger;
+    }
+}
+
+.contianer-large{
+    display: inline-flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: end;
+    .pageLinks{
+        float: right;
+        a{
+            color: white;
+            padding-right: 20px;
+            font-size: large;
+            cursor: pointer;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+body{
+    margin: 0%;
+    background-color: wheat;
+}
