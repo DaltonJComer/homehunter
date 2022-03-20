@@ -4,8 +4,10 @@ import { RentComponent } from './rent/rent.component';
 import { BuyComponent } from './buy/buy.component';
 import { SellComponent } from './sell/sell.component';
 import { LearnComponent } from './learn/learn.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+  {path:'home', component: HomeComponent},
   {path: 'rent',component: RentComponent},
   {path: 'buy',component: BuyComponent},
   {path: 'sell',component: SellComponent},
