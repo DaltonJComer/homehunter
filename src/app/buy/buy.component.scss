@@ -1,0 +1,118 @@
+.filterBar {
+  width: 700px;
+  height: 60px;
+  display: inline-flex;
+  background: rgba(29,53,87,1);
+  border: 2px solid rgba(0,0,0,1);
+  border-radius: 50px;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.searchButton {
+    width: 50%;
+  height: 70%;
+  color: rgba(29,53,87,1);
+  background: rgba(241,250,238,1);
+  font-family: Roboto;
+  border-radius: 30px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: large;
+  margin-left: 30px;
+  margin-right: 15px;
+  cursor: pointer;
+  border: none;
+}
+
+.filterField {
+  width: 50%;
+  height: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 15px;
+  border-radius: 6px;
+  border: none;
+}
+
+
+.sortButton {
+  width: 90px;
+  color: white;
+  display: inline-block;
+  font-size: 24px;
+  background-color: gray;
+  text-align: center;
+  margin: 30px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  justify-content: end;
+}
+.listings {
+  width: 100%;
+  height: 54rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list{
+    display: block;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 90%;
+}
+.property{
+    width: 30%;
+    height: 50%;
+    background-color: wheat;
+    border: 1px solid black;
+    margin: 15px;
+    display: inline-block;
+    border-radius: 30px;
+    box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.479),inset  5px 5px 10px rgba(255, 255, 255, 0.479);
+    .photos{
+        width: 100%;
+        height: 50%;
+        border-bottom: 1px solid black;
+        background-color: gray;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+    .topDetails{
+        .location{
+            display: inline-block;
+            padding-top: 5px;
+            .adress{
+                display: block;
+                text-align: end;
+                font-size: larger;
+                font-weight: bold;
+            }
+            .city{
+                text-align: end;
+                display: block;
+                font-size: small;
+            }
+            width: 10rem;
+        }
+        .price{
+            display: inline-block;
+            float:right;
+            margin: 15px;
+            text-align: end;
+            vertical-align:top ;
+            font-weight: bolder;
+            font-size: large;
+        }
+        display: block;
+    }
+    .bottomDetails{
+        height: 2rem;
+        position: sticky;
+        padding-left: 15px;
+        top: 100%;
+    }
+}

@@ -4,9 +4,25 @@
 <span class="mainText">
     SELL YOUR HOME WITH EASE
 </span>
-<button class="sellButton">
+<button class="sellButton" (click)="this.isCreatingListing = true">
         Sell a property
     </button>
 <button class="resourcesButton">
     Resources
 </button>
+
+<div class="newListingOverlay" *ngIf="this.isCreatingListing">
+    <div class="listingForm">
+        <label for="adress">Street Address:<br> <input type="text" id="adress"></label>
+        <label for="province">Province:<br> <input type="text" id="province"></label>
+        <label for="postalCode">Postal Code:<br> <input type="text" id="postalCode"></label>
+        <label for="beds">Number of Beds:<br> <input type="number" id="beds"></label>
+        <label for="baths">Number of Baths:<br> <input type="number" id="baths"></label>
+        <label for="size">Size (sqft):<br> <input type="number" id="size"></label>
+        <label for="price">Price:<br> <input type="number" id="price"></label>
+        <div class="buttons">
+            <button class="cancel" (click)="this.isCreatingListing=false">Cancel</button>
+            <button class="submit" >Submit</button>
+        </div>
+    </div>
+</div>
