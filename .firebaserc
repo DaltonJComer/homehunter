@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "homehunter-cosc3p94"
+  },
+  "targets": {
+    "homehunter-cosc3p94": {
+      "hosting": {
+        "homehunter": [
+          "homehunter-cosc3p94"
+        ]
+      }
+    }
   }
 }
