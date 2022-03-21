@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SellComponent implements OnInit {
 
+  public isCreatingListing = false;
   constructor() { }
 
   ngOnInit(): void {
