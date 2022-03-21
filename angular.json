@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "homehunter:build:production",
+            "firebaseProject": "homehunter-cosc3p94",
+            "firebaseHostingSite": "homehunter-cosc3p94"
+          }
         }
       }
     }
