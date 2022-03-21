@@ -10,100 +10,20 @@
 
 <div class="listings">
     <div class="list">
-        <div class="property">
+        <div class="property" *ngFor="let listing of data">
             <div class="photos">
 
             </div>
             <div class="topDetails">
                 <div class="location">
-                    <div class="adress">14 Namely Blvd.</div>
-                    <div class="city">St. Catharines, ON</div>
+                    <div class="adress">{{listing.address}}</div>
+                    <div class="city">{{listing.city}}</div>
                 </div>
-                <div class="price">$700,000</div>
+                <div class="price">${{listing.price}}</div>
             </div>
 
             <div class="bottomDetails">
-                2 Beds | 1 Bath | 1,000sqft
-            </div>
-        </div>
-        <div class="property">
-            <div class="photos">
-
-            </div>
-            <div class="topDetails">
-                <div class="location">
-                    <div class="adress">14 Namely Blvd.</div>
-                    <div class="city">St. Catharines, ON</div>
-                </div>
-                <div class="price">$700,000</div>
-            </div>
-
-            <div class="bottomDetails">
-                2 Beds | 1 Bath | 1,000sqft
-            </div>
-        </div>
-        <div class="property">
-            <div class="photos">
-
-            </div>
-            <div class="topDetails">
-                <div class="location">
-                    <div class="adress">14 Namely Blvd.</div>
-                    <div class="city">St. Catharines, ON</div>
-                </div>
-                <div class="price">$700,000</div>
-            </div>
-
-            <div class="bottomDetails">
-                2 Beds | 1 Bath | 1,000sqft
-            </div>
-        </div>
-        <div class="property">
-            <div class="photos">
-
-            </div>
-            <div class="topDetails">
-                <div class="location">
-                    <div class="adress">14 Namely Blvd.</div>
-                    <div class="city">St. Catharines, ON</div>
-                </div>
-                <div class="price">$700,000</div>
-            </div>
-
-            <div class="bottomDetails">
-                2 Beds | 1 Bath | 1,000sqft
-            </div>
-        </div>
-        <div class="property">
-            <div class="photos">
-
-            </div>
-            <div class="topDetails">
-                <div class="location">
-                    <div class="adress">14 Namely Blvd.</div>
-                    <div class="city">St. Catharines, ON</div>
-                </div>
-                <div class="price">$700,000</div>
-            </div>
-
-            <div class="bottomDetails">
-                2 Beds | 1 Bath | 1,000sqft
-            </div>
-        </div>
-        <div class="property">
-            <div class="photos">
-
-            </div>
-            <div class="topDetails">
-                <div class="location">
-                    <div class="adress">14 Namely Blvd.</div>
-                    <div class="city">St. Catharines, ON</div>
-                </div>
-                <div class="price">$700,000</div>
-            </div>
-
-            <div class="bottomDetails">
-                2 Beds | 1 Bath | 1,000sqft
+                {{listing.beds}} Beds | {{listing.baths}} Baths | {{listing.size}}sqft
             </div>
         </div>
     </div>
