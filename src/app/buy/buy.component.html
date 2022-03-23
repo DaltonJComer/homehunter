@@ -1,4 +1,5 @@
 <div class="layoutGrid">
+    
     <div class="leftPanel">
         <h1>Listings for Purchase</h1>
         <div class="filterOptions">
@@ -13,6 +14,7 @@
                 <div  *ngFor="let listing of data">
                     <div class="property" [ngStyle]="{'box-shadow': listing==selectedListing? 'inset 5px 5px 10px rgba(20,20,20, 8)':''}" *ngIf="matchesFilter(listing)" (click)="viewListing(listing);">
                         <div class="photos">
+                            <img [src] = "imgRand()">
                         </div>
                         <div class="topDetails">
                             <div class="location">
@@ -37,8 +39,8 @@
             <h3>{{this.selectedListing.city}}</h3>
             <h2>${{this.selectedListing.price}}</h2>
 
-            <div class="photos">
-            
+            <div class="photos" >
+                <img [src] = "imgRand()">
             </div>
             <div class="ownerDetails">
                 <h3>Owner Details</h3>
@@ -78,4 +80,5 @@
             </div>
         </div>
     </div>
+    
 </div>
