@@ -1,12 +1,21 @@
 <div class="layoutGrid">
     <div class="leftPanel">
-        <h1>Listings for Purchase</h1>
         <div class="filterOptions">
-            <input type="text" placeholder="Location">
-            <input type="text" placeholder="Max Price">
-            <input type="text" placeholder="Beds">      
-            <input type="text" placeholder="Baths">    
-            <button>Search</button>  
+            <div class="radio-buttons">
+                    Listing Type:
+                <input type="radio" id="rentals" name="listingType" value="rent"checked>
+                <label for="rent">Rent</label>
+                
+                <input type="radio" id="buy" name="listingType" value="buy">
+                <label for="buy">Buy</label>
+            </div>
+            <div class="text-fields">
+                <input type="text" placeholder="Location">
+                <input type="text" placeholder="Max Price">
+                <input type="text" placeholder="Beds">      
+                <input type="text" placeholder="Baths">    
+                <button class="search">Search</button>
+            </div>
         </div>
         <div class="listings">
             <div class="list">
@@ -38,13 +47,14 @@
             <h2>${{this.selectedListing.price}}</h2>
 
             <div class="photos">
-            
+                **PHOTOS**
             </div>
             <div class="ownerDetails">
                 <h3>Owner Details</h3>
                 Dalton Comer <br>
                 Email: dalton.comer@outlook.com <br>
                 Phone: 647-287-7115
+                <button>Contact</button>
             </div>
             <div class="propertyDescription">
                 <h2>Property Description</h2>
