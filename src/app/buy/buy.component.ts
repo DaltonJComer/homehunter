@@ -12,9 +12,23 @@ export class BuyComponent implements OnInit {
   selectedListing : any = [];
   detailsVisible = false;
   fakeAmenities = ["Laundry","AC","Heating","Parking","Security System"];
+  
+  images=[
+    {img:"assets/1.jpg"},
+    {img:"assets/2.jpg"},
+    {img:"assets/3.jpg"},
+    {img:"assets/4.jpg"},
+    {img:"assets/5.jpg"},
+    {img:"assets/6.jpg"},
+    {img:"assets/7.jpg"},
+    {img:"assets/8.jpg"},
+    {img:"assets/9.jpg"},
+    {img:"assets/10.jpg"}];
+    
 
   constructor(private db: AngularFireDatabase) { }
 
+  newArr = [];
   ngOnInit(): void {
     const ref = this.db.list("Listings");
     ref.valueChanges().subscribe((data)=>{
@@ -22,6 +36,11 @@ export class BuyComponent implements OnInit {
     console.log(data);
   })
   }
+
+  imgRand(){
+    let img = this.images[Math.floor(Math.random()* this.images.length)];
+    return img.img;
+ }
 
   matchesFilter(listing:any){
       return true;

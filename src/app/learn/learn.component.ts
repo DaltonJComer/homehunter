@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-learn',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LearnComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
-  ngOnInit(): void {
+  goToPage($myParam: string = ''): void {
+    const navigationDetails: string[] = ['/home'];
+    if($myParam.length) {
+      navigationDetails.push($myParam);
+    }
+    this.router.navigate(navigationDetails);
   }
+  
+  ngOnInit(): void {
+    
+  }
+  
+
 
 }

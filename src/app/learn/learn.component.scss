@@ -3,16 +3,20 @@
     columns: 3;
     padding: 5%;
     column-gap: 5%;
+
 }
 
 .rentCard{
     grid-column-start: 0;
     grid-column-end: 1;
+
+
 }
 
 .buyCard{
     grid-column-start: 1;
     grid-column-end: 2;
+
 }
 
 .sellCard{
@@ -21,8 +25,64 @@
 }
 
 .card{
-    height: 500px;
-    background-color: aqua;
+    height: 700px;
+    //background-color: aqua;
+
     border: 2px solid black;
     border-radius: 50px;
+    
 }
+
+h1{ 
+        font-family:"Helvetica";
+        color:#404040;
+        text-align: center;
+        font-size: 35px;
+}
+h3{ 
+    font-family:"Helvetica";
+    color:#404040;
+    text-align: center;
+    font-size: 35px;
+}
+h2{ 
+    font-family:"Helvetica";
+    color:#404040;
+    text-align: center;
+    font-size: 35px;
+}
+p1{
+    font-size: 20px;
+    text-align: center;
+}
+p{
+    font-size: 15px;
+    text-align: left;
+    font-style: italic;
+    font-weight: bold;
+    font-family:"Helvetica";
+
+}
+
+h{
+    text-align: left;
+    font-size: 25px;
+    font-style: italic;
+}
+hx{
+    font-size: 40px;
+    text-align: center;
+}
+
+button{
+    width:50%;
+    margin-left:25%;
+    margin-right:25%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
