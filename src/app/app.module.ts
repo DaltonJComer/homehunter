@@ -8,8 +8,6 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
 
 
-
-
 export const firebaseConfig={
   apiKey: "AIzaSyBfmSrOUgl2EiP-zSL3zpvyRxyPkJqBHqo",
   authDomain: "homehunter-cosc3p94.firebaseapp.com",

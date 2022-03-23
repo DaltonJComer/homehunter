@@ -9,6 +9,9 @@ import { AngularFireDatabase } from '@angular/fire/compat/database';
 export class RentComponent implements OnInit {
 
   data: any = [];
+  selectedListing : any = [];
+  detailsVisible = false;
+  fakeAmenities = ["Laundry","AC","Heating","Parking","Security System"];
 
   constructor(private db: AngularFireDatabase) { }
 
@@ -19,4 +22,18 @@ export class RentComponent implements OnInit {
     console.log(data);
   })
   }
+  
+  matchesFilter(listing:any){
+    return true;
+}
+viewListing(listing:any){
+  if(listing == this.selectedListing){
+    this.detailsVisible = false;
+    this.selectedListing = [];
+  }
+  else{
+    this.detailsVisible = true;
+    this.selectedListing = listing;
+  }
+}
 }
