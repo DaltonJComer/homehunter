@@ -20,23 +20,23 @@
         </div>
         <div class="listings">
             <div class="list">
-                <div  *ngFor="let listing of data">
+                <div *ngFor="let listing of data">
                     <div class="property" [ngStyle]="{'box-shadow': listing==selectedListing? 'inset 5px 5px 10px rgba(20,20,20, 8)':''}" *ngIf="matchesFilter(listing)" (click)="viewListing(listing);">
                         <div class="photos">
                             <img [src] = "imgRand()">
                         </div>
-                        <div class="topDetails">
-                            <div class="location">
-                                <div class="adress">{{listing.address}}</div>
-                                <div class="city">{{listing.city}}</div>
+                        <div class="details">
+                            <div class="topDetails">
+                                <div class="location">
+                                    <div class="adress">{{listing.address}}</div>
+                                    <div class="city">{{listing.city}}</div>
+                                </div>
+                                <div class="price">${{listing.price}}</div>
                             </div>
-                            <div class="price">${{listing.price}}</div>
+                            <div class="bottomDetails">
+                                {{listing.beds}} Beds | {{listing.baths}} Baths | {{listing.size}}sqft
+                            </div>
                         </div>
-            
-                        <div class="bottomDetails">
-                            {{listing.beds}} Beds | {{listing.baths}} Baths | {{listing.size}}sqft
-                        </div>
-                        
                     </div>
                 </div>
             </div>
