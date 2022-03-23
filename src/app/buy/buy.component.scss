@@ -63,28 +63,40 @@
     }
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #F1FAEE;
+  border: 1px solid black;
+  border-radius: 10rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: lightgray;
+}
 
 .layoutGrid{
   display: flex;
-  border-top: 2px solid black;
   .leftPanel{
     background-color: #457B9D;
-    height: 650px;
+    height: 95vh;
     width: 50%;
     display: inline-flex;
     flex-direction: column;
     overflow-y: scroll;
-    ::-webkit-scrollbar {
-      width: 4px;
-      overflow-y: scroll;
-      background: red;
-      box-shadow: inset 0 0 4px red;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-      background: blue;
-      border-radius: 10px;
-  }
+
+   ​
     h1{
       color: #F1FAEE;
       font-weight: bolder;
@@ -95,9 +107,9 @@
       display: block;
       padding-top: 5px;
       padding-bottom: 5px;
-      width: 70%;
+      width: 80%;
       border-radius: 10px;
-      margin: 10px;
+      margin-top: 1rem;
       text-align: center;
       border: 1px solid black;
       box-shadow: inset -2px -2px 4px black, inset 2px 2px 4px white, 2px 2px 4px black;
@@ -111,27 +123,40 @@
         border: none;
         font-size: small;
         box-shadow: inset 2px 2px 4px black;
-        background-color: #457B9D;
-        color: white;
+        //background-color: #457B9D;
+        color: #457B9D;
         font-weight: bold;
         font-size: smaller;   
       }
       input::placeholder{
-        color: white;
+        color: #457B9D;
         font-weight: bold;
         font-size: smaller;
+        font-style: italic;
       }
       button{
         margin-left: 30px !important;
-        margin: 5px;
         border-radius: 30px;
         border: none;
         box-shadow: 2px 2px 4px black, inset -2px -2px 4px black, inset 2px 2px 4px white;
         background-color: #1D3557;
         color: #F1FAEE;
-        height: 30px;
+        height: 2rem;
+        width: 8rem;
         cursor: pointer;
        
+      }
+      .radio-buttons{
+        display: flex;
+        //justify-content: center;
+        margin: 1rem;
+        align-items: center;
+        font-weight: bold;
+        input{
+          box-shadow: none;
+          width: 5%;
+          height: 1.5em;
+        }
       }
     }
     h1{
@@ -144,7 +169,7 @@
     display: flex;
     flex-direction: column;
     width: 50%;
-    height: 650px;
+    height: 95vh;
     background-color: #A8DADC;
     
     .fullListing{
@@ -168,31 +193,51 @@
         margin-top: 0%;
       }
       .photos{
+        display: block;
         width: 100%;
         //padding-bottom: 50%;
         border: 2px solid black;
         //margin-left: 10%;
+        text-align: center;
       }
       .ownerDetails{
+        display: flex;
+        flex-direction: column;
         width: fit-content;
         align-self: flex-end;
         height: fit-content;
         background-color: #457B9D;
         border-radius: 30px;
-        padding: 5%;
+        padding: 2rem;
         margin-top: 5%;
-        box-shadow: inset -2px -2px 4px black, inset 2px 2px 4px white;
+        box-shadow: inset 5px 5px 10px #192c38, inset -5px -5px 10px rgb(186, 241, 243);
         color: #F1FAEE;
+        button{
+          margin-top: 1rem;
+          width: 80%;
+          align-self: center;
+          border-radius: 10px;
+          border: 1px solid #457B9D;
+          background-color: #A8DADC;
+          box-shadow: inset 2px 2px 4px white, inset -2px -2px 4px black;
+        }
       }
       .propertyDescription{
         width: 100%;
         height: fit-content;
         h2{
+          font-size: xx-large;
           text-align: left;
         }
         p{
+          font-size: larger;
           padding: 3%;
-          text-indent: 10%;
+        }
+      }
+      .propertyDetails{
+        h2{
+          font-size: xx-large;
+          text-align: center;
         }
       }
       .details{
@@ -201,8 +246,9 @@
         display: grid;
         columns: 2;
         text-align: center;
-        h2{
-          text-align: left;
+        font-size: large;
+        b{
+          font-size: larger;
         }
         .size{
           grid-column: 1;
@@ -236,10 +282,24 @@
         }
       }
       .amenities{
+        align-self: flex-start;
         h2{
+          font-size: xx-large;
           text-align: left;
+          margin: 0%;
         }
-        
+        .amenitiesList{
+          display: inline;
+          font-size: larger;
+          list-style-type:square;
+          ul{
+            margin: 0%;
+          }
+          li{
+            float: left;
+            margin: 1rem;
+          }
+        }
       }
     }
   }
