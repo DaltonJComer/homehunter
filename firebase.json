@@ -4,6 +4,7 @@
   },
   "hosting": [
     {
+      "target": "homehunter",
       "public": "main",
       "ignore": [
         "firebase.json",

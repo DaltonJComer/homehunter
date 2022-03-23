@@ -9,6 +9,6 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(db: AngularFireDatabase){} // here you can do stuff with lists
   title = 'homehunter';
+  constructor(db: AngularFireDatabase){} // here you can do stuff with lists
 }
