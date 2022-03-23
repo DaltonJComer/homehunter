@@ -1,15 +1,22 @@
-<span class="subText">
-    No matter your real estate needs, HomeHunter’s got you covered
-</span>
-<span class="mainText">
-    SELL YOUR HOME WITH EASE
-</span>
-<button class="sellButton" (click)="this.isCreatingListing = true">
-        Sell a property
-    </button>
-<button class="resourcesButton">
-    Resources
-</button>
+<div class="full-page">
+    <div class="sell-left">
+        <div class="mainText">
+            SELL YOUR HOME WITH EASE
+        </div>
+        <div class="subText">
+            No matter your real estate needs, HomeHunter’s got you covered
+        </div>
+        <button class="sellButton" (click)="this.isCreatingListing = true">
+            Start Selling!
+        </button>
+    </div>
+    <div class="sell-right">
+        <div class="photo">
+            <img src="https://images.unsplash.com/photo-1626178793926-22b28830aa30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx" alt="sell image">
+        </div>
+    </div>
+</div>
+
 
 <div class="newListingOverlay" *ngIf="this.isCreatingListing">
     <div class="listingForm">
