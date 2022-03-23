@@ -1,90 +1,37 @@
-.filterBar {
-  width: 700px;
-  height: 60px;
-  display: inline-flex;
-  background: rgba(29,53,87,1);
-  border: 2px solid rgba(0,0,0,1);
-  border-radius: 50px;
-  align-items: center;
-  margin-top: 30px;
-  margin-left: 30px;
-}
-
-.searchButton {
-    width: 50%;
-  height: 70%;
-  color: rgba(29,53,87,1);
-  background: rgba(241,250,238,1);
-  font-family: Roboto;
-  border-radius: 30px;
-  text-align: center;
-  font-weight: bolder;
-  font-size: large;
-  margin-left: 30px;
-  margin-right: 15px;
-  cursor: pointer;
-  border: none;
-}
-
-.filterField {
-  width: 50%;
-  height: 30px;
-  font-weight: bold;
-  text-align: center;
-  margin-left: 15px;
-  border-radius: 6px;
-  border: none;
-}
-
-
-.sortButton {
-  width: 90px;
-  color: white;
-  display: inline-block;
-  font-size: 24px;
-  background-color: gray;
-  text-align: center;
-  margin: 30px;
-  border-radius: 30px;
-  border: none;
-  cursor: pointer;
-  justify-content: end;
-}
-.listings {
-  width: 100%;
-  height: 54rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .list{
     display: block;
     flex-wrap: wrap;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
 }
+
 .property{
-    width: 30%;
-    height: 50%;
-    background-color: wheat;
-    border: 1px solid black;
-    margin: 15px;
-    display: inline-block;
+    width: 90%;
+    height: fit-content;
+    background-color: #F1FAEE;
+    border: 2px solid #1D3557;
+    margin: 5%;
+    display: block;
     border-radius: 30px;
-    box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.479),inset  5px 5px 10px rgba(255, 255, 255, 0.479);
+    box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.8),inset  5px 5px 10px rgba(255, 255, 255, 0.479);
+    color: #1D3557;
     .photos{
         width: 100%;
-        height: 50%;
-        border-bottom: 1px solid black;
-        background-color: gray;
+        height: 10rem;
+        border-bottom: 2px solid black;
         border-top-right-radius: 30px;
         border-top-left-radius: 30px;
+        img{
+          border-top-right-radius: 30px;
+          border-top-left-radius: 30px;
+          height: 100%;
+          width: 100%;
+        }
     }
     .topDetails{
         .location{
             display: inline-block;
-            padding-top: 5px;
+            padding: 10px;
             .adress{
                 display: block;
                 text-align: end;
@@ -96,23 +43,203 @@
                 display: block;
                 font-size: small;
             }
-            width: 10rem;
         }
         .price{
             display: inline-block;
             float:right;
             margin: 15px;
             text-align: end;
-            vertical-align:top ;
             font-weight: bolder;
             font-size: large;
         }
-        display: block;
     }
     .bottomDetails{
         height: 2rem;
-        position: sticky;
-        padding-left: 15px;
-        top: 100%;
+        display: block;
+        margin-top: 10%;
+        margin-left: 15px;
+        margin-bottom: 15px;
     }
+}
+
+
+.layoutGrid{
+  display: flex;
+  border-top: 2px solid black;
+  .leftPanel{
+    background-color: #457B9D;
+    height: 650px;
+    width: 50%;
+    display: inline-flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    ::-webkit-scrollbar {
+      width: 4px;
+      overflow-y: scroll;
+      background: red;
+      box-shadow: inset 0 0 4px red;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+      background: blue;
+      border-radius: 10px;
+  }
+    h1{
+      color: #F1FAEE;
+      font-weight: bolder;
+    }
+    .filterOptions{
+      align-self: center;
+      background-color: #A8DADC;
+      display: block;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      width: 70%;
+      border-radius: 10px;
+      margin: 10px;
+      text-align: center;
+      border: 1px solid black;
+      box-shadow: inset -2px -2px 4px black, inset 2px 2px 4px white, 2px 2px 4px black;
+      input{
+        
+        width: 15%;
+        margin: 5px;
+        text-align: center;
+        height: 30px;
+        border-radius: 30px;
+        border: none;
+        font-size: small;
+        box-shadow: inset 2px 2px 4px black;
+        background-color: #457B9D;
+        color: white;
+        font-weight: bold;
+        font-size: smaller;   
+      }
+      input::placeholder{
+        color: white;
+        font-weight: bold;
+        font-size: smaller;
+      }
+      button{
+        margin-left: 30px !important;
+        margin: 5px;
+        border-radius: 30px;
+        border: none;
+        box-shadow: 2px 2px 4px black, inset -2px -2px 4px black, inset 2px 2px 4px white;
+        background-color: #1D3557;
+        color: #F1FAEE;
+        height: 30px;
+        cursor: pointer;
+       
+      }
+    }
+    h1{
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 0%;
+    }
+  }
+  .rightPanel{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 650px;
+    background-color: #A8DADC;
+    
+    .fullListing{
+      height: 100%;
+      //width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 10%;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      h1{
+        text-align: center;
+        margin-bottom: 0%;
+      }
+      h2{
+        text-align: center;
+      }
+      h3{
+        text-align: center;
+        font-weight: lighter;
+        margin-top: 0%;
+      }
+      .photos{
+        width: 100%;
+        padding-bottom: 50%;
+        border: 2px solid black;
+        //margin-left: 10%;
+      }
+      .ownerDetails{
+        width: fit-content;
+        align-self: flex-end;
+        height: fit-content;
+        background-color: #457B9D;
+        border-radius: 30px;
+        padding: 5%;
+        margin-top: 5%;
+        box-shadow: inset -2px -2px 4px black, inset 2px 2px 4px white;
+        color: #F1FAEE;
+      }
+      .propertyDescription{
+        width: 100%;
+        height: fit-content;
+        h2{
+          text-align: left;
+        }
+        p{
+          padding: 3%;
+          text-indent: 10%;
+        }
+      }
+      .details{
+        width: 100%;
+        height: auto;
+        display: grid;
+        columns: 2;
+        text-align: center;
+        h2{
+          text-align: left;
+        }
+        .size{
+          grid-column: 1;
+          grid-row: 1;
+          margin: 5%;
+        }
+        .type{
+          grid-column: 2;
+          grid-row: 1;
+          margin: 5%;
+        }
+        .year{
+          grid-column: 1;
+          grid-row: 2;
+          margin: 5%;
+        }
+        .monthlyCost{
+          grid-column: 2;
+          grid-row: 2;
+          margin: 5%;
+        }
+        .beds{
+          grid-column: 1;
+          grid-row: 3;
+          margin: 5%;
+        }
+        .baths{
+          grid-column: 2;
+          grid-row: 3;
+          margin: 5%;
+        }
+      }
+      .amenities{
+        h2{
+          text-align: left;
+        }
+        
+      }
+    }
+  }
 }
