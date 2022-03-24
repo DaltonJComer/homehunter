@@ -20,13 +20,55 @@
 
 <div class="newListingOverlay" *ngIf="this.isCreatingListing">
     <div class="listingForm">
-        <label for="adress">Street Address:<br> <input type="text" #address></label>
-        <label for="province">City:<br> <input type="text" #city></label>
-        <label for="postalCode">Postal Code:<br> <input type="text" #postalCode></label>
-        <label for="beds">Number of Beds:<br> <input type="number" #beds></label>
-        <label for="baths">Number of Baths:<br> <input type="number" #baths></label>
-        <label for="size">Size (sqft):<br> <input type="number" #size></label>
-        <label for="price">Price:<br> <input type="number" #price></label>
+        <div class="owner-info-fields">
+            <h3>Owner Details</h3>
+            <label for="firstName">First Name:<br> <input type="text" #firstName></label>
+            <label for="lastName">Last Name:<br> <input type="text" #lastName></label>
+            <label for="email">Email:<br> <input type="text" #email></label>
+            <label for="phone">Phone Number:<br> <input type="text" #phoneNumber></label>
+        </div>
+        <div class="property-info-fields">
+            <h3>Property Details</h3>
+            <label for="adress">Street Address:<br> <input type="text" #address></label>
+            <label for="province">City:<br> <input type="text" #city></label>
+            <label for="postalCode">Postal Code:<br> <input type="text" #postalCode></label>
+            <label for="beds">Number of Beds:<br> <input type="number" #beds></label>
+            <label for="baths">Number of Baths:<br> <input type="number" #baths></label>
+            <label for="size">Size (sqft):<br> <input type="number" #size></label>
+            <label for="price">Price:<br> <input type="number" #price></label>
+            <label for="yearBuilt">Year Built:<br> <input type="number" #yearBuilt></label>
+            <label for="monthlyCost">Monthly utility and tax cost:<br> <input type="number" #monthlyCost></label>
+            <label for="listingType">Listing Type:<br>
+            <select name="listingType" id="listingType" #listingType>
+                <option value="rent">Rent</option>
+                <option value="buy">Buy</option>
+            </select>
+            </label>
+            <h3>Amenities</h3>
+            <div class="amenities">
+                <div class="amenity"> 
+                    <input type="radio" id="onsiteLaundry" name="onsiteLaundry" value="On-Site Laundry" #onsiteLaundry><label for="onsiteLaundry">On-Site Laundry</label>
+                </div>    
+                <div class="amenity">
+                    <input type="radio" id="AC" name="AC" value="AC"><label for="AC" #AC>AC</label>
+                </div>
+                <div class="amenity">
+                    <input type="radio" id="heating" name="heating" value="Heating"><label for="heating" #heating>Heating</label>
+                </div>
+                <div class="amenity">
+                    <input type="radio" id="onsiteParking" name="onsiteParking" value="On-Site Parking" #onsiteParking><label for="onsiteParking">On-Site Parking</label>     
+                </div>
+                <div class="amenity">
+                    <input type="radio" id="securitySystem" name="securitySystem" value="Security System" #securitySystem><label for="securitySystem">Security System</label>  
+                </div>
+                <div class="amenity">
+                    <input type="radio" id="onsiteGym" name="onsiteGym" value="On-Site Gym" #onsiteGym><label for="onsiteGym">On-Site Gym</label>    
+                </div>
+                <div class="amenity">
+                    <input type="radio" id="internetIncluded" name="internetIncluded" value="Internet Included" #internetIncluded><label for="internetIncluded">Internet Included</label>                                
+                </div>
+            </div>
+        </div>
         <div class="buttons">
             <button class="cancel" (click)="this.isCreatingListing=false">Cancel</button>
             <button class="submit" (click)="this.postListing()">Submit</button>
