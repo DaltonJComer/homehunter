@@ -116,14 +116,17 @@
     justify-content: center;
     align-items: center;
     .listingForm{
-      width: min(70vw,700px);
-      height: min(50vh,500px);
+      // width: min(80vw, 1000px);
+      // height: min(70vh,800px);
+      width: 80vw;
+      height: 70vh;
       background-color: #457B9D;
       border-radius: 30px;
-      padding-bottom: 0% !important;
+      padding: 2rem;
       text-align: center;
       overflow-y: scroll;
       color: #f1faee;
+      box-shadow: inset 6px 6px 12px #f1faee, inset -6px -6px 12px #1D3557;
       label{
         display: inline-block;
         width: 30%;
@@ -136,11 +139,18 @@
           color: #457B9D;
           font-weight: bolder !important;
           text-align: center;
+          border-radius: 30px;
+          border: 1px solid black;
+          box-shadow: inset 2px 2px 4px #1D3557, inset -2px 2px 4px #1D3557;
+          background-color: #dae4d8;
         }
         
         select{
           width: 100%;
           height: 2.5rem;
+          border-radius: 30px;
+          box-shadow: inset -2px -2px 4px #1D3557, inset 2px 2px 4px #f1faee;
+          background-color: #dae4d8;
         }
       }
       .buttons{
